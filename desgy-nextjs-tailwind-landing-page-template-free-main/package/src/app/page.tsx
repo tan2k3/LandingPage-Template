@@ -1,6 +1,6 @@
 import React from 'react'
 import Hero from '@/app/components/Home/Hero'
-import Aboutus from '@/app/components/Home/AboutUs'
+import Service from '@/app/components/Home/Service'
 import Dedicated from '@/app/components/Home/Dedicated'
 import Digital from '@/app/components/Home/Digital'
 import Beliefs from '@/app/components/Home/Beliefs'
@@ -16,14 +16,14 @@ import Insta from '@/app/components/Home/Insta'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Desgy Solutions',
+  title: 'EIU IIC',
 }
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Aboutus />
+      <Service />
       <Dedicated />
       <Digital />
       <Beliefs />

@@ -1,4 +1,4 @@
-const AboutSkeleton = () => {
+const ServiceSkeleton = () => {
   return (
     <>
       <div>
@@ -30,4 +30,4 @@ const AboutSkeleton = () => {
   )
 }
 
-export default AboutSkeleton
+export default ServiceSkeleton

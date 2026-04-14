@@ -4,9 +4,9 @@ import { aboutdata } from '@/app/types/aboutdata'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Icon } from '@iconify/react'
-import AboutSkeleton from '../../Skeleton/AboutUs'
+import ServiceSkeleton from '../../Skeleton/Service'
 
-const Aboutus = () => {
+const Service = () => {
   // fetch about data
   const [about, setAbout] = useState<aboutdata[]>([])
   const [loading, setLoading] = useState(true)
@@ -29,6 +29,7 @@ const Aboutus = () => {
 
   return (
     <section id='About' className=' bg-cover bg-center overflow-hidden'>
+      <div id='services-section' className='sr-only' />
       <div className='container mx-auto max-w-7xl px-4 relative z-1'>
         <div className='p-12 bg-grey rounded-3xl'>
           <Image
@@ -39,13 +40,13 @@ const Aboutus = () => {
             className='absolute bottom-1 -left-20'
           />
           <p className='text-center text-primary text-lg tracking-widest uppercase mt-10'>
-            about us
+            Dịch vụ IIC
           </p>
-          <h2 className='text-center pb-12'>Know more about us.</h2>
+          <h2 className='text-center pb-12'>Các giải pháp và dịch vụ hỗ trợ chuyển đổi Công nghiệp 4.0.</h2>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mt-10'>
             {loading
               ? Array.from({ length: 3 }).map((_, index) => (
-                  <AboutSkeleton key={index} />
+                  <ServiceSkeleton key={index} />
                 ))
               : about.map((item, i) => (
                   <div
@@ -83,4 +84,4 @@ const Aboutus = () => {
   )
 }
 
-export default Aboutus
+export default Service

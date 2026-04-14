@@ -30,40 +30,16 @@ const footer = () => {
         <div className='grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 lg:grid-cols-12 xl:gap-x-8'>
           {/* COLUMN-1 */}
           <div className='col-span-4'>
-            <h4 className='text-white text-3xl leading-9 mb-4 lg:mb-20'>
-              Desgy Solutions
+            <h4 className='text-white text-3xl leading-9 mb-4 lg:mb-4'>
+              EIU IIC
             </h4>
-            <div className='flex items-center gap-4'>
-              <div className='footer-icons'>
-                <Link href='https://facebook.com'>
-                  <Image
-                    src={'/images/footer/vec.svg'}
-                    alt='facebook'
-                    width={15}
-                    height={20}
-                  />
-                </Link>
-              </div>
-              <div className='footer-icons'>
-                <Link href='https://twitter.com'>
-                  <Image
-                    src={'/images/footer/twitter.svg'}
-                    alt='twitter'
-                    width={25}
-                    height={20}
-                  />
-                </Link>
-              </div>
-              <div className='footer-icons'>
-                <Link href='https://instagram.com'>
-                  <Image
-                    src={'/images/footer/instagram.svg'}
-                    alt='instagram'
-                    width={25}
-                    height={20}
-                  />
-                </Link>
-              </div>
+            <p className='text-white text-lg mb-4'>
+              Trung tâm Đổi mới sáng tạo Công nghiệp 4.0
+            </p>
+            <div className='text-white text-base space-y-3'>
+              <p>Email: <Link href='mailto:i4.0@eiu.edu.vn' className='underline'>i4.0@eiu.edu.vn</Link></p>
+              <p>Hotline: <Link href='tel:+84913185137' className='underline'>(+84) 0913 185137</Link></p>
+              <p>Địa chỉ: Đại học Quốc tế Miền Đông</p>
             </div>
           </div>
           {/* CLOUMN-2/3 */}
@@ -93,14 +69,7 @@ const footer = () => {
           <div className='mt-4 grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 xl:gap-x-8'>
             <div>
               <p className='text-center md:text-start text-white text-lg'>
-                @2025 - All Rights Reserved by{' '}
-                <Link
-                  href='https://getnextjstemplates.com/'
-                  target='_blank'
-                  className='hover:text-white/60 hover:underline'>
-                  {' '}
-                  GetNextJsTemplates.com
-                </Link>
+                ©2025 EIU - Trung tâm Đổi mới sáng tạo Công nghiệp 4.0 (IIC)
               </p>
             </div>
             <div className='flex justify-center md:justify-end'>

@@ -1,4 +1,3 @@
-import { NextResponse } from 'next/server'
 
 import { HeaderItem } from '@/app/types/menu'
 import { aboutdata } from '@/app/types/aboutdata'
@@ -7,38 +6,39 @@ import { featureddata } from '@/app/types/featureddata'
 import { testimonials } from '@/app/types/testimonials'
 import { articles } from '@/app/types/articles'
 import { footerlinks } from '@/app/types/footerlinks'
+import { NextResponse } from 'next/server'
 
 // header nav-links data
 const headerData: HeaderItem[] = [
-  { label: 'About Us', href: '#About' },
-  { label: 'Team', href: '#Team' },
-  { label: 'FAQ', href: '#FAQ' },
-  { label: 'Blog', href: '#Blog' },
-  { label: 'Docs', href: '/documentation' },
+  { label: 'VỀ CHÚNG TÔI', href: '#digital-section' },
+  { label: 'DỊCH VỤ', href: '#services-section' },
+  { label: 'ĐÀO TẠO', href: '#training-section' },
+  { label: 'ĐÁNH GIÁ', href: '#FAQ' },
+  { label: 'LIÊN HỆ', href: '#first-section' },
 ]
 
 // about data
 const Aboutdata: aboutdata[] = [
   {
-    heading: 'About us.',
+    heading: 'Cụm Số hóa',
     imgSrc: '/images/aboutus/imgOne.svg',
     paragraph:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem',
-    link: 'Learn more',
+      'Tối ưu hóa thiết bị truyền thống và nâng cao hiệu suất máy móc với cảm biến thông minh, giám sát trạng thái vận hành và dashboard trực quan.',
+    link: 'Xem chi tiết',
   },
   {
-    heading: 'Services.',
+    heading: 'Cụm Thông minh',
     imgSrc: '/images/aboutus/imgTwo.svg',
     paragraph:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem',
-    link: 'Learn more',
+      'Triển khai Smart Warehouse và Smart Factory với robot di động, cánh tay robot, hệ thống MES và thực tế tăng cường nhằm sản xuất thông minh hơn.',
+    link: 'Khám phá giải pháp',
   },
   {
-    heading: 'Our Works.',
+    heading: 'Đánh giá & Tư vấn SIRI',
     imgSrc: '/images/aboutus/imgThree.svg',
     paragraph:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem',
-    link: 'Learn more',
+      'Đánh giá mức độ sẵn sàng Công nghiệp 4.0 theo chuẩn SIRI và xây dựng lộ trình chuyển đổi số cụ thể, biến tiềm năng thành giá trị kinh doanh.',
+    link: 'Đăng ký tư vấn',
   },
 ]
 
@@ -99,48 +99,48 @@ const FeaturedData: featureddata[] = [
 // plans data
 const PlansData = [
   {
-    heading: 'Startup',
+    heading: 'Đào tạo Kỹ thuật 4.0',
     price: {
-      monthly: 19,
-      yearly: 190,
+      monthly: 0,
+      yearly: 0,
     },
-    user: 'per user',
+    user: 'Chương trình đặc thù',
     features: {
-      profiles: '5 Social Profiles',
-      posts: '5 Scheduled Posts Per Profile',
-      templates: '400+ Templated',
-      view: 'Calendar View',
-      support: '24/7 Support',
+      profiles: 'Khí nén, Thuỷ lực',
+      posts: 'Cảm biến & Tự động hóa',
+      templates: 'Điều khiển PLC & Python',
+      view: 'Đào tạo thực hành tại trường',
+      support: 'Giảng viên EIU hướng dẫn',
     },
   },
   {
-    heading: 'Business',
+    heading: 'Đào tạo Robot & MES',
     price: {
-      monthly: 29,
-      yearly: 290,
+      monthly: 0,
+      yearly: 0,
     },
-    user: 'per user',
+    user: 'Khóa học doanh nghiệp',
     features: {
-      profiles: '10 Social Profiles',
-      posts: '5 Scheduled Posts Per Profile',
-      templates: '600+ Templated',
-      view: 'Calendar View',
-      support: '24/7 VIP Support',
+      profiles: 'Robot ứng dụng',
+      posts: 'Smart Warehouse & Smart Factory',
+      templates: 'MES, AR và quản lý sản xuất',
+      view: 'Mô hình sản xuất thông minh',
+      support: 'Hỗ trợ giải pháp 4.0',
     },
   },
   {
-    heading: 'Agency',
+    heading: 'Chuyển đổi Công nghiệp 4.0',
     price: {
-      monthly: 59,
-      yearly: 590,
+      monthly: 0,
+      yearly: 0,
     },
-    user: 'per user',
+    user: 'Đào tạo & tư vấn',
     features: {
-      profiles: '100 Social Profiles',
-      posts: '100 Scheduled Posts Per Profile',
-      templates: '800+ Templated',
-      view: 'Calendar View',
-      support: '24/7 VIP Support',
+      profiles: 'Đánh giá chuẩn SIRI',
+      posts: 'Quản trị công nghiệp & 4.0',
+      templates: 'Lộ trình chuyển đổi số',
+      view: 'Đào tạo theo nhu cầu doanh nghiệp',
+      support: 'Tư vấn chuyên sâu',
     },
   },
 ]
@@ -252,42 +252,33 @@ const ArticlesData: articles[] = [
 // footer links data
 const FooterLinksData: footerlinks[] = [
   {
-    section: 'Menu',
+    section: 'MENU',
     links: [
-      { label: 'About Us', href: '#About' },
-      { label: 'Team', href: '#Team' },
-      { label: 'FAQ', href: '#FAQ' },
-      { label: 'Blog', href: '#Blog' },
+      { label: 'VỀ CHÚNG TÔI', href: '#digital-section' },
+      { label: 'DỊCH VỤ', href: '#services-section' },
+      { label: 'ĐÀO TẠO', href: '#training-section' },
+      { label: 'ĐÁNH GIÁ', href: '#FAQ' },
     ],
   },
   {
-    section: 'Category',
+    section: 'HỖ TRỢ',
     links: [
-      { label: 'Design', href: '/' },
-      { label: 'Mockup', href: '/' },
-      { label: 'View all', href: '/' },
-      { label: 'Log In', href: '/' },
+      { label: 'Email: i4.0@eiu.edu.vn', href: 'mailto:i4.0@eiu.edu.vn' },
+      { label: 'Hotline: (+84) 0913 185137', href: 'tel:+84913185137' },
+      { label: 'Liên hệ', href: '#first-section' },
     ],
   },
   {
-    section: 'Pages',
+    section: 'PHÁP LÝ',
     links: [
-      { label: '404', href: '/' },
-      { label: 'Instructions', href: '/' },
-      { label: 'License', href: '/' },
-    ],
-  },
-  {
-    section: 'Others',
-    links: [
-      { label: 'Styleguide', href: '/' },
-      { label: 'Changelog', href: '/' },
+      { label: 'Chính sách bảo mật', href: '/' },
+      { label: 'Điều khoản dịch vụ', href: '/' },
     ],
   },
 ]
 
 export const GET = () => {
-  return NextResponse.json({
+  return Response.json({
     headerData,
     Aboutdata,
     WorkData,

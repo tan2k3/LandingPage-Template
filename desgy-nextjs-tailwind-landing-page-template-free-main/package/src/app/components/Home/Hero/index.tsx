@@ -1,49 +1,36 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react/dist/iconify.js'
 
 const Hero = () => {
-  const leftAnimation = {
-    initial: { x: '-100%', opacity: 0 },
-    animate: { x: 0, opacity: 1 },
-    exit: { x: '-100%', opacity: 0 },
-    transition: { duration: 0.6 },
-  }
-
-  const rightAnimation = {
-    initial: { x: '100%', opacity: 0 },
-    animate: { x: 0, opacity: 1 },
-    exit: { x: '100%', opacity: 0 },
-    transition: { duration: 0.6 },
-  }
-
   return (
-    <section className='relative overflow-hidden z-1'>
-      <div className='container mx-auto pt-24 max-w-7xl px-4'>
-        <div className='grid grid-cols-12 justify-center items-center'>
-          <div className='col-span-12 xl:col-span-5 lg:col-span-6 md:col-span-12 sm:col-span-12'>
-            <div className='py-2 px-5 bg-primary/15 rounded-full w-fit'>
-              <p className='text-primary text-lg font-bold'>DESIGN AGENCY</p>
-            </div>
-            <h1>
-              Dedicated to bring your ideas to life.
+    <section className='relative overflow-hidden z-1 min-h-screen flex items-center'>
+      <div className='absolute inset-0 pointer-events-none -z-10'>
+        <Image
+          src='/images/hero/hinh-3.jpg'
+          alt='IIC hero background image'
+          fill
+          className='object-cover opacity-60'
+        />
+
+      </div>
+      <div className='container mx-auto relative z-10 max-w-7xl px-4 w-full'>
+        <div className='grid grid-cols-1 xl:grid-cols-12 items-center gap-12 min-h-screen py-16'>
+          <div className='col-span-12 xl:col-span-7 xl:col-start-1 text-white'>
+            {/* Eyebrow text */}
+            <p className='uppercase tracking-widest text-sm text-white mb-4'>
+              Trung tâm Đổi mới sáng tạo Công nghiệp 4.0 (IIC) tại Đại học Quốc tế Miền Đông (EIU)
+            </p>
+            {/* Main heading */}
+            <h1 className='text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight uppercase text-white'>
+              Giúp cải thiện năng suất và tối ưu hóa quy trình quản lý kinh doanh của doanh nghiệp.
             </h1>
-            <Link href={'#'}>
-              <button className='bg-primary text-white text-xl font-semibold py-5 px-12 rounded-full hover:bg-darkmode hover:cursor-pointer mt-10'>
-                Get started
+            {/* Button */}
+            <Link href={'#training-section'}>
+              <button className='mt-10 bg-white text-green-600 text-lg font-semibold py-4 px-10 rounded-full hover:bg-gray-100 transition'>
+                Liên hệ tư vấn
               </button>
             </Link>
-          </div>
-          <div className='xl:col-span-7 lg:col-span-6 lg:block hidden'>
-            <Image
-              src='/images/hero/banner-image.png'
-              alt='banner image'
-              width={600}
-              height={600}
-              className='w-full'
-            />
           </div>
         </div>
       </div>
