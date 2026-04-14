@@ -3,13 +3,13 @@ import Link from 'next/link'
 
 const Insta = () => {
   return (
-    <section className='container mx-auto max-w-2xl pb-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:-mb-44 lg:-mb-34 '>
+    <section className='w-full px-4 sm:px-6 lg:px-8 pb-16 xl:-mb-44 lg:-mb-34 '>
       <div className='grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
         {/* Image Container 1 */}
         <div className='relative group mx-auto overflow-hidden rounded-3xl'>
           {/* Image */}
           <Image
-            src='/images/insta/insta1.png'
+            src='/images/insta/Frame-2-1-1.png'
             width={306}
             height={306}
             alt='instaOne'
@@ -33,11 +33,11 @@ const Insta = () => {
         {/* Image Container 2 */}
         <div className='relative group mx-auto overflow-hidden rounded-3xl'>
           <Image
-            src='/images/insta/insta2.png'
+            src='/images/insta/Frame-2-2.png'
             width={306}
             height={306}
             alt='instaTwo'
-            className='w-full'
+            className='w-full h-full object-cover'
           />
 
           {/* Sliding Overlay */}
@@ -61,7 +61,7 @@ const Insta = () => {
             width={306}
             height={306}
             alt='instaThree'
-            className='w-full'
+            className='w-full h-full object-cover'
           />
           {/* Sliding Overlay */}
           <Link href='https://instagram.com' target='_blank'>
@@ -80,11 +80,11 @@ const Insta = () => {
         {/* Image Container 4 */}
         <div className='relative group mx-auto overflow-hidden rounded-3xl'>
           <Image
-            src='/images/insta/insta4.png'
+            src='/images/insta/Frame-2-4.png'
             width={306}
             height={306}
             alt='instaFour'
-            className='w-full'
+            className='w-full h-full object-cover'
           />
           {/* Sliding Overlay */}
           <Link href='https://instagram.com' target='_blank'>

@@ -13,7 +13,7 @@ const headerData: HeaderItem[] = [
   { label: 'VỀ CHÚNG TÔI', href: '#digital-section' },
   { label: 'DỊCH VỤ', href: '#services-section' },
   { label: 'ĐÀO TẠO', href: '#training-section' },
-  { label: 'ĐÁNH GIÁ', href: '#FAQ' },
+  { label: 'DỰ ÁN', href: '#featured-section' },
   { label: 'LIÊN HỆ', href: '#first-section' },
 ]
 
@@ -257,7 +257,7 @@ const FooterLinksData: footerlinks[] = [
       { label: 'VỀ CHÚNG TÔI', href: '#digital-section' },
       { label: 'DỊCH VỤ', href: '#services-section' },
       { label: 'ĐÀO TẠO', href: '#training-section' },
-      { label: 'ĐÁNH GIÁ', href: '#FAQ' },
+      { label: 'DỰ ÁN', href: '#featured-section' },
     ],
   },
   {
