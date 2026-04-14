@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Slider from 'react-slick'
 import Link from 'next/link'
-import { articles } from '@/app/types/articles'
-import ArticlesSkeleton from '../../Skeleton/Articles'
+import { news } from '@/app/types/news'
+import NewsSkeleton from '../../Skeleton/News'
 
 const settings = {
   dots: true,
@@ -35,10 +35,10 @@ const settings = {
   ],
 }
 
-const Articles = () => {
+const News = () => {
   // fetch data
 
-  const [articles, setArticles] = useState<articles[]>([])
+  const [newsList, setNewsList] = useState<news[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const Articles = () => {
         const res = await fetch('/api/data')
         if (!res.ok) throw new Error('Failed to fetch')
         const data = await res.json()
-        setArticles(data.ArticlesData)
+        setNewsList(data.NewsData)
       } catch (error) {
         console.error('Error fetching services:', error)
       } finally {
@@ -59,7 +59,7 @@ const Articles = () => {
   }, [])
 
   return (
-    <section id='Blog' className='relative bg-grey overflow-hidden'>
+    <section id='blog-section' className='relative bg-grey overflow-hidden'>
       <div className='container mx-auto max-w-7xl px-4 relative'>
         <div className='text-center'>
           <p className='text-primary text-xl font-normal tracking-widest'>
@@ -71,9 +71,9 @@ const Articles = () => {
         <Slider {...settings}>
           {loading
             ? Array.from({ length: 3 }).map((_, i) => (
-                <ArticlesSkeleton key={i} />
+                <NewsSkeleton key={i} />
               ))
-            : articles.map((items, i) => (
+            : newsList.map((items, i) => (
                 <div key={i}>
                   <div className='bg-white m-3 px-3 pt-3 pb-12 my-10 shadow-lg rounded-4xl relative'>
                     <Image
@@ -106,4 +106,4 @@ const Articles = () => {
     </section>
   )
 }
-export default Articles
+export default News

@@ -10,7 +10,7 @@ import Featured from '@/app/components/Home/Featured'
 import Manage from '@/app/components/Home/Manage'
 import FAQ from '@/app/components/Home/FAQ'
 import Testimonial from '@/app/components/Home/Testimonials'
-import Articles from '@/app/components/Home/Articles'
+import News from '@/app/components/Home/News'
 import Join from '@/app/components/Home/Joinus'
 import Insta from '@/app/components/Home/Insta'
 import { Metadata } from 'next'
@@ -33,7 +33,7 @@ export default function Home() {
       <Manage />
       <FAQ />
       <Testimonial />
-      <Articles />
+      <News />
       <Join />
       <Insta />
     </main>

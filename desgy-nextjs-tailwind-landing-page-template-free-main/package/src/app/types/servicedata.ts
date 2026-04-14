@@ -1,4 +1,4 @@
-export type aboutdata = {
+export type servicedata = {
   heading: string
   imgSrc: string
   // imgIcon: string

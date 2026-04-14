@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { aboutdata } from '@/app/types/aboutdata'
+import { servicedata } from '@/app/types/servicedata'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Icon } from '@iconify/react'
@@ -8,7 +8,7 @@ import ServiceSkeleton from '../../Skeleton/Service'
 
 const Service = () => {
   // fetch about data
-  const [about, setAbout] = useState<aboutdata[]>([])
+  const [service, setService] = useState<servicedata[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const Service = () => {
         const res = await fetch('/api/data')
         if (!res.ok) throw new Error('Failed to fetch')
         const data = await res.json()
-        setAbout(data.Aboutdata)
+        setService(data.ServiceData)
       } catch (error) {
         console.error('Error fetching services:', error)
       } finally {
@@ -48,7 +48,7 @@ const Service = () => {
               ? Array.from({ length: 3 }).map((_, index) => (
                 <ServiceSkeleton key={index} />
               ))
-              : about.map((item, i) => (
+              : service.map((item, i) => (
                 <div
                   key={i}
                   className='hover:bg-darkmode bg-white rounded-3xl p-8 shadow-xl group'>

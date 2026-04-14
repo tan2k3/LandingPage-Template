@@ -1,10 +1,10 @@
 
 import { HeaderItem } from '@/app/types/menu'
-import { aboutdata } from '@/app/types/aboutdata'
+import { servicedata } from '@/app/types/servicedata'
 import { workdata } from '@/app/types/workdata'
 import { featureddata } from '@/app/types/featureddata'
 import { testimonials } from '@/app/types/testimonials'
-import { articles } from '@/app/types/articles'
+import { news } from '@/app/types/news'
 import { footerlinks } from '@/app/types/footerlinks'
 import { NextResponse } from 'next/server'
 
@@ -14,11 +14,12 @@ const headerData: HeaderItem[] = [
   { label: 'DỊCH VỤ', href: '#services-section' },
   { label: 'ĐÀO TẠO', href: '#training-section' },
   { label: 'DỰ ÁN', href: '#featured-section' },
+  { label: 'TIN TỨC & SỰ KIỆN', href: '#blog-section' },
   { label: 'LIÊN HỆ', href: '#first-section' },
 ]
 
 // about data
-const Aboutdata: aboutdata[] = [
+const ServiceData: servicedata[] = [
   {
     heading: 'Cụm Số hóa',
     imgSrc: '/images/aboutus/imgOne.svg',
@@ -197,8 +198,8 @@ const TestimonialsData: testimonials[] = [
   },
 ]
 
-// artical data
-const ArticlesData: articles[] = [
+// news data
+const NewsData: news[] = [
   {
     time: '5 min',
     heading: 'We Launch Delia',
@@ -280,12 +281,12 @@ const FooterLinksData: footerlinks[] = [
 export const GET = () => {
   return Response.json({
     headerData,
-    Aboutdata,
+    ServiceData,
     WorkData,
     FeaturedData,
     PlansData,
     TestimonialsData,
-    ArticlesData,
+    NewsData,
     FooterLinksData,
   })
 }

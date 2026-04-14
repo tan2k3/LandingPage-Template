@@ -1,4 +1,4 @@
-const ArticlesSkeleton = () => {
+const NewsSkeleton = () => {
   return (
     <>
       <div>
@@ -28,4 +28,4 @@ const ArticlesSkeleton = () => {
   )
 }
 
-export default ArticlesSkeleton
+export default NewsSkeleton

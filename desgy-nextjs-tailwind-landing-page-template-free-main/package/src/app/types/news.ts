@@ -1,4 +1,4 @@
-export type articles = {
+export type news = {
   time: string
   heading: string
   heading2: string

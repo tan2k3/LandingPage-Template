@@ -10,9 +10,9 @@ const Hero = () => {
           src='/images/hero/hinh-3.jpg'
           alt='IIC hero background image'
           fill
-          className='object-cover opacity-60'
+          className='object-cover'
         />
-
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
       <div className='container mx-auto relative z-10 max-w-7xl px-4 w-full'>
         <div className='grid grid-cols-1 xl:grid-cols-12 items-center gap-12 min-h-screen py-16'>
