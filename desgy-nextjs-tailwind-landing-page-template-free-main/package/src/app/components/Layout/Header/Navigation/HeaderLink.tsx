@@ -24,9 +24,8 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
     >
       <Link
         href={item.href}
-        className={`text-sm flex hover:text-black capitalized  ${
-          path === item.href ? "text-black/75 " : " text-black/75 "
-        }`}
+        className={`text-xs xl:text-sm whitespace-nowrap flex hover:text-black capitalized  ${path === item.href ? "text-black/75 " : " text-black/75 "
+          }`}
       >
         {item.label}
         {item.submenu && (
@@ -57,11 +56,10 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
             <Link
               key={index}
               href={subItem.href}
-              className={`block px-4 py-2   ${
-                path === subItem.href
-                  ? "text-white"
-                  : "text-black dark:text-white hover:bg-primary"
-              }`}
+              className={`block px-4 py-2   ${path === subItem.href
+                ? "text-white"
+                : "text-black dark:text-white hover:bg-primary"
+                }`}
             >
               {subItem.label}
             </Link>

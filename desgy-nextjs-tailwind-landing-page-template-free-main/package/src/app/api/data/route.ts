@@ -10,6 +10,7 @@ import { NextResponse } from 'next/server'
 
 // header nav-links data
 const headerData: HeaderItem[] = [
+  { label: 'TRANG CHỦ', href: '/' },
   { label: 'VỀ CHÚNG TÔI', href: '#digital-section' },
   { label: 'DỊCH VỤ', href: '#services-section' },
   { label: 'ĐÀO TẠO', href: '#training-section' },
