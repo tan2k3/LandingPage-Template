@@ -85,26 +85,23 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`sticky top-0 z-40 w-full transition-all duration-300 border-b border-black/10 bg-white ${
-        sticky ? ' shadow-lg' : 'shadow-none'
-      }`}>
+      className={`sticky top-0 z-40 w-full transition-all duration-300 border-b border-black/10 bg-white ${sticky ? ' shadow-lg' : 'shadow-none'
+        }`}>
       <div className='lg:py-0 py-2'>
         <div className='container mx-auto max-w-(--breakpoint-xl) flex items-center justify-between px-4'>
           <div
-            className={`pr-16 lg:border-r border-black/10 duration-300 ${
-              sticky ? 'py-3' : 'py-7'
-            }`}>
+            className={`pr-16 duration-300 ${sticky ? 'py-3' : 'py-7'
+              }`}>
             <Logo />
           </div>
-          <nav className='hidden lg:flex grow items-center gap-8 justify-center'>
+          <nav className='hidden lg:flex grow items-center gap-4 justify-center'>
             {headerData.map((item, index) => (
               <HeaderLink key={index} item={item} />
             ))}
           </nav>
           <div
-            className={`flex items-center gap-4 pl-16 lg:border-l border-black/10 duration-300 ${
-              sticky ? 'py-3' : 'py-7'
-            }`}>
+            className={`flex items-center gap-4 pl-16 duration-300 ${sticky ? 'py-3' : 'py-7'
+              }`}>
             <button
               className='hidden lg:block bg-transparent text-darkmode border hover:bg-darkmode border-darkmode hover:text-white px-4 py-2 rounded-lg hover:cursor-pointer'
               onClick={() => {
@@ -170,9 +167,8 @@ const Header: React.FC = () => {
         )}
         <div
           ref={mobileMenuRef}
-          className={`lg:hidden fixed top-0 right-0 h-full w-full bg-darkmode shadow-lg transform transition-transform duration-300 max-w-xs ${
-            navbarOpen ? 'translate-x-0' : 'translate-x-full'
-          } z-50`}>
+          className={`lg:hidden fixed top-0 right-0 h-full w-full bg-darkmode shadow-lg transform transition-transform duration-300 max-w-xs ${navbarOpen ? 'translate-x-0' : 'translate-x-full'
+            } z-50`}>
           <div className='flex items-center justify-between p-4'>
             <h2 className='text-lg font-bold text-midnight_text dark:text-midnight_text text-white'>
               <Logo />
