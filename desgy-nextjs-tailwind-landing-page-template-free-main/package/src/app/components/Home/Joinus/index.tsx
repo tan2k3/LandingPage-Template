@@ -8,9 +8,9 @@ const Join = () => {
       <div className='container mx-auto max-w-7xl px-4'>
         <div className='text-center'>
           <p className='text-primary text-lg font-normal tracking-widest uppercase'>
-            Join us
+            Liên hệ chúng tôi
           </p>
-          <h2 className='my-6'>Take your business to the new level.</h2>
+          <h2 className='my-6'>Hoàn thiện doanh nghiệp của bạn</h2>
           <p className='text-black/50 text-base font-normal max-w-3xl mx-auto'>
             Craven omni memoria patriae zombieland clairvius narcisse religionis
             sunt diri undead historiarum. Golums, zombies unrelenting et Raimi
